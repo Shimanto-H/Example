@@ -19,3 +19,19 @@
 #50 legs
 
 #Create a python script to solve this problem.
+
+def AskUserAnimals():
+    try:
+        ch = int(input("How many Chickens?: ".strip()))
+        cow = int(input("How many Cows?: ".strip()))
+        dog = int(input("How many Dogs?: ".strip()))
+        if (type(ch) == type(int())) and (type(cow) == type(int())) and (type(dog) == type(int())):
+            legs = (2 * ch) + (4 * cow) + (4 * dog)
+            print("There are {} Legs.".format(legs))
+        else:
+            print("There was an unexpected error, expected integer inputs, got something else.")
+    except:
+        print("Input was not an integer")
+        
+AskUserAnimals()
+ 
